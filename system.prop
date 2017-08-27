@@ -1,0 +1,80 @@
+# system.prop for opa
+#
+
+ro.sf.lcd_density=320
+
+ro.baseband.arch=msm
+
+mobiledata.interfaces=rmnet0,rmnet1
+telephony.lteOnGsmDevice=1
+ril.subscription.types=RUIM,NV
+
+rild.libargs=-d /dev/smd0
+rild.libpath=/system/lib/libril-qc-qmi-1.so
+ro.telephony.default_network=9
+ro.telephony.ril_class=HTCQualcommRIL
+
+persist.timed.enable=true
+persist.gps.qmienabled=true
+
+# DEVICE_PROVISIONED=1
+ro.vendor.extension_library=/system/lib/libqc-opt.so
+
+audio.offload.disable=1
+persist.audio.fluence.speaker=true
+persist.audio.fluence.voicecall=true
+persist.audio.fluence.voicerec=false
+ro.qc.sdk.audio.fluencetype=fluence
+use.dedicated.device.for.voip=true
+
+# NFC
+debug.nfc.fw_download=true
+debug.nfc.fw_boot_download=false
+debug.nfc.se=true
+ro.nfc.port=I2C
+
+ro.cwm.forbid_format=/firmware_radio,/firmware_q6,/devlog
+ro.cwm.forbid_mount=/firmware_radio,/firmware_q6,/devlog
+
+
+# Experimental HTC Stuff
+ro.ril.oem.ecclist=911
+ro.ril.enable.a52=0
+ro.ril.enable.a53=1
+ro.ril.enable.dtm=0
+ro.ril.gprsclass=10
+ro.ril.hsdpa.category=14
+ro.ril.hsupa.category=6
+ro.ril.hsxpa=4
+ro.ril.def.agps.mode=1
+ro.ril.fast.dormancy.rule=2
+ro.ril.att.feature=1
+ro.ril.radio.svn=4
+ro.ril.disable.fd.plmn.prefix=23402,23410,23411,23420,27202
+ro.ril.enable.sdr=0
+ro.ril.enable.gea3=1
+ro.ril.enable.ucsq=2
+ro.ril.set.mtusize=1410
+ro.ril.enable.r8fd=0
+ro.ril.disable.cpc=1
+ro.ril.ciq=0
+ro.ril.def.agps.mode=1
+ro.ril.enable.pre_r8fd=1
+ro.ril.fd.pre_r8_tout.scr_off=3600
+ro.ril.fd.pre_r8_tout.scr_on=0
+ro.ril.fd.r8_tout.scr_off=0
+ro.ril.fd.r8_tout.scr_on=0
+ro.ril.ltefgi=1577974912
+ro.ril.enable.isr=1
+EnableLTEBANDSCANPRI=1
+ro.ril.disable.lte.band2_5=0
+# system props for QCRIL
+#
+persist.radio.snapshot_timer=0
+
+# SSD_RIL
+ro.telephony.call_ring.multiple=0
+#
+# System prop for sending transmit power request to RIL during WiFi hotspot on/off
+#
+ro.ril.transmitpower=true
